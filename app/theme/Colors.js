@@ -9,7 +9,8 @@ const Colors = {
   lightThemeColor: '#aab7fa',
   greyBlue: '#eef1fb',
   placeHolderColor: '#95999d',
-  gray: '#cdcdcd',
+  grey: '#cdcdcd',
+  red: '#FF0000',
 };
 
 export default Colors;

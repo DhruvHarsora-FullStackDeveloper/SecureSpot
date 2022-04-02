@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { ProgressStep, ProgressSteps } from 'react-native-progress-steps';
-import Icon from '../../../assest/Icon';
+import Icons from '../../../assets/icons';
 import CustomInput from '../../../components/Input/CustomInput';
 import { NavigationStrings } from '../../../constants';
 import Colors from '../../../theme/Colors';
@@ -132,7 +132,7 @@ const RegisterScreen = ({ navigation }) => {
                 activeOpacity={0.7}>
                 <Image
                   style={styles.iconStyle}
-                  source={visibility ? Icon.eye : Icon.eyeOff}
+                  source={visibility ? Icons.show : Icons.hide}
                 />
               </TouchableOpacity>
             </View>
@@ -153,7 +153,7 @@ const RegisterScreen = ({ navigation }) => {
                 activeOpacity={0.7}>
                 <Image
                   style={styles.iconStyle}
-                  source={confirmVisibility ? Icon.eye : Icon.eyeOff}
+                  source={confirmVisibility ? Icons.show : Icons.hide}
                 />
               </TouchableOpacity>
             </View>
