@@ -112,6 +112,7 @@ const RegisterScreen = () => {
               autoCapitalize="none"
               keyboardType="numeric"
               onChangeText={e => setPhoneNum(e)}
+              maxLength={10}
             />
             <View>
               <CustomInput

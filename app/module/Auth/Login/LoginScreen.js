@@ -11,10 +11,10 @@ import {
 } from 'react-native';
 import Icon from '../../../assest/Icon';
 import { CustomButton, CustomInput } from '../../../components';
-import { ConstStrings } from '../../../constants';
+import { ConstStrings, NavigationStrings } from '../../../constants';
 import styles from './styles';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
@@ -49,7 +49,7 @@ const LoginScreen = () => {
 
   //
   const gotoRegesterScreen = () => {
-    Alert.alert('go to register Screen');
+    navigation.navigate(NavigationStrings.REGISTER);
   };
   const resetPasswordScreen = () => {
     Alert.alert('forgot password');

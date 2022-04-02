@@ -27,12 +27,12 @@ const AppNavigation = () => {
             <Stack.Screen
               name={NavigationStrings.LOGIN}
               component={LoginScreen}
-              options={{ headerShown: true }}
+              options={{ headerShown: false }}
             />
             <Stack.Screen
               name={NavigationStrings.REGISTER}
               component={RegisterScreen}
-              options={{ headerShown: true }}
+              options={{ headerShown: false }}
             />
           </>
         )}

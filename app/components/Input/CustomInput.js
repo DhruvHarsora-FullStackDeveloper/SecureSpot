@@ -14,6 +14,7 @@ const CustomInput = ({
   keyboardType = 'default',
   secureTextEntry = false,
   autoCapitalize = 'none',
+  maxLength,
 }) => {
   return (
     <View style={styles.container}>
@@ -29,6 +30,7 @@ const CustomInput = ({
         autoCorrect={false}
         keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
+        maxLength={maxLength}
       />
     </View>
   );
