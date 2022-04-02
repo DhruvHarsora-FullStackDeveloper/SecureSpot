@@ -1,3 +1,3 @@
 import NavigationStrings from './NavigationStrings';
-
-export { NavigationStrings };
+import ConstStrings from './ConstStrings';
+export { NavigationStrings, ConstStrings };
