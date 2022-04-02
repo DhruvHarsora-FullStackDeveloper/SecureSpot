@@ -4,7 +4,7 @@ import React from 'react';
 import { LogBox } from 'react-native';
 import { useSelector } from 'react-redux';
 import { NavigationStrings } from '../constants';
-import { IntroScreen, LoginScreen } from '../module';
+import { IntroScreen, LoginScreen, RegisterScreen } from '../module';
 import { onBoardSelectors } from '../redux/KeyRedux';
 
 const Stack = createStackNavigator();
@@ -23,11 +23,18 @@ const AppNavigation = () => {
             options={{ headerShown: false }}
           />
         ) : (
-          <Stack.Screen
-            name={NavigationStrings.LOGIN}
-            component={LoginScreen}
-            options={{ headerShown: true }}
-          />
+          <>
+            <Stack.Screen
+              name={NavigationStrings.LOGIN}
+              component={LoginScreen}
+              options={{ headerShown: true }}
+            />
+            <Stack.Screen
+              name={NavigationStrings.REGISTER}
+              component={RegisterScreen}
+              options={{ headerShown: true }}
+            />
+          </>
         )}
       </Stack.Navigator>
     </NavigationContainer>

@@ -7,6 +7,8 @@ const Colors = {
   transparent: 'transparent',
   yellowColor: '#FDD835',
   lightThemeColor: '#aab7fa',
+  greyBlue: '#eef1fb',
+  placeHolderColor: '#95999d',
 };
 
 export default Colors;
