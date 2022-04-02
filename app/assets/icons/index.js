@@ -1,3 +1,5 @@
 export default {
-  nextButton: require('../icons/next_btn.png'),
+  security: require('../icons/security.png'),
+  folder: require('../icons/folder.png'),
+  profile: require('../icons/account.png'),
 };

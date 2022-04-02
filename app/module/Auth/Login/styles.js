@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold',
-    fontSize: moderateScale(15),
+    paddingVertical: verticalScale(10),
+    fontSize: moderateScale(16),
     color: Colors.themeColor,
   },
   textInput: {
