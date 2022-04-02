@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Icon from '../../../assest/Icon';
+import Icons from '../../../assets/icons';
 import { CustomButton, CustomInput } from '../../../components';
 import { ConstStrings, NavigationStrings } from '../../../constants';
 import styles from './styles';
@@ -96,7 +96,7 @@ const LoginScreen = ({ navigation }) => {
             activeOpacity={0.7}>
             <Image
               style={styles.iconStyle}
-              source={visibility ? Icon.eye : Icon.eyeOff}
+              source={visibility ? Icons.show : Icons.hide}
             />
           </TouchableOpacity>
         </View>
