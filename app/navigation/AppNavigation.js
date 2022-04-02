@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { NavigationStrings } from '../constants';
 import { IntroScreen, LoginScreen, RegisterScreen } from '../module';
 import { onBoardSelectors } from '../redux/KeyRedux';
+import TabBottomNavigation from './TabNavigation';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,11 @@ const AppNavigation = () => {
             <Stack.Screen
               name={NavigationStrings.REGISTER}
               component={RegisterScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name={NavigationStrings.TABS}
+              component={TabBottomNavigation}
               options={{ headerShown: false }}
             />
           </>
