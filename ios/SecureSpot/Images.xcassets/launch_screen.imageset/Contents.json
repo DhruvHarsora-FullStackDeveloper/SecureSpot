@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SecureSpot.png",
+      "filename" : "secure_spot.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SecureSpot@2x.png",
+      "filename" : "secure_spot@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "SecureSpot@3x.png",
+      "filename" : "secure_spot@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

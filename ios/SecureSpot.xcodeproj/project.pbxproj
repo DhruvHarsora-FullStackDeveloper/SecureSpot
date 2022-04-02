@@ -13,7 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6DDC858001C293E597B54764 /* libPods-SecureSpot-SecureSpotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D37A8B4E5C65ADC02FFB5A3E /* libPods-SecureSpot-SecureSpotTests.a */; };
 		76654E27C50E3D7E301E8FF1 /* libPods-SecureSpot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BC21B1B199AAE00323E266 /* libPods-SecureSpot.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E08CFA0627F883A800B44BF0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E08CFA0527F883A800B44BF0 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SecureSpot/main.m; sourceTree = "<group>"; };
 		1B67A22974DCB00548644B38 /* Pods-SecureSpot-SecureSpotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureSpot-SecureSpotTests.release.xcconfig"; path = "Target Support Files/Pods-SecureSpot-SecureSpotTests/Pods-SecureSpot-SecureSpotTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A1329AF8A8BB41DB2B9855E /* Pods-SecureSpot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureSpot.debug.xcconfig"; path = "Target Support Files/Pods-SecureSpot/Pods-SecureSpot.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SecureSpot/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0BC21B1B199AAE00323E266 /* libPods-SecureSpot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecureSpot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAE09D9077DFC61E9F54CDD /* Pods-SecureSpot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureSpot.release.xcconfig"; path = "Target Support Files/Pods-SecureSpot/Pods-SecureSpot.release.xcconfig"; sourceTree = "<group>"; };
 		D37A8B4E5C65ADC02FFB5A3E /* libPods-SecureSpot-SecureSpotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecureSpot-SecureSpotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08CFA0527F883A800B44BF0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E53C2B9480D7325AC9533602 /* Pods-SecureSpot-SecureSpotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecureSpot-SecureSpotTests.debug.xcconfig"; path = "Target Support Files/Pods-SecureSpot-SecureSpotTests/Pods-SecureSpot-SecureSpotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -89,8 +89,8 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				E08CFA0527F883A800B44BF0 /* Launch Screen.storyboard */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = SecureSpot;
@@ -114,7 +114,6 @@
 				E53C2B9480D7325AC9533602 /* Pods-SecureSpot-SecureSpotTests.debug.xcconfig */,
 				1B67A22974DCB00548644B38 /* Pods-SecureSpot-SecureSpotTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -243,7 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				E08CFA0627F883A800B44BF0 /* Launch Screen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

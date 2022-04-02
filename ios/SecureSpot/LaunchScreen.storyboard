@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,21 +13,21 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="RyO-D2-DTw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="QKy-mB-ajG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="KVI-cT-C39">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="EYv-Rt-HcP"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mCD-o3-wq2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EYv-Rt-HcP" firstAttribute="trailing" secondItem="QKy-mB-ajG" secondAttribute="trailing" id="23G-Xq-08p"/>
-                            <constraint firstItem="EYv-Rt-HcP" firstAttribute="bottom" secondItem="QKy-mB-ajG" secondAttribute="bottom" id="IVF-zf-eQl"/>
-                            <constraint firstItem="QKy-mB-ajG" firstAttribute="leading" secondItem="EYv-Rt-HcP" secondAttribute="leading" id="RtZ-e2-x61"/>
-                            <constraint firstItem="QKy-mB-ajG" firstAttribute="top" secondItem="EYv-Rt-HcP" secondAttribute="top" id="uhr-3n-wNM"/>
+                            <constraint firstItem="mCD-o3-wq2" firstAttribute="bottom" secondItem="KVI-cT-C39" secondAttribute="bottom" id="HJP-pi-q6z"/>
+                            <constraint firstItem="mCD-o3-wq2" firstAttribute="trailing" secondItem="KVI-cT-C39" secondAttribute="trailing" id="gZ8-09-SnF"/>
+                            <constraint firstItem="KVI-cT-C39" firstAttribute="leading" secondItem="mCD-o3-wq2" secondAttribute="leading" id="rRX-Kl-Do1"/>
+                            <constraint firstItem="KVI-cT-C39" firstAttribute="top" secondItem="mCD-o3-wq2" secondAttribute="top" id="wc2-bO-pee"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +37,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch_screen" width="1080" height="1920"/>
+        <image name="launch_screen" width="640" height="1136"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
