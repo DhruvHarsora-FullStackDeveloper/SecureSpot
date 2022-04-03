@@ -10,12 +10,8 @@ export const createTable = () => {
     txn.executeSql(
       `CREATE TABLE IF NOT EXISTS vault (id INTEGER PRIMARY KEY AUTOINCREMENT, note VARCHAR(255), email VARCHAR(255), password VARCHAR(255))`,
       [],
-      (sqlTxn, res) => {
-        console.log('table created.');
-      },
-      error => {
-        console.log('error on creating table ', error.message);
-      },
+      (sqlTxn, res) => {},
+      error => {},
     );
   });
 };
@@ -25,12 +21,8 @@ export const InsertData = (app_name, app_email, password) => {
     txn.executeSql(
       'INSERT INTO vault (note,email,password) VALUES (?,?,?)',
       [app_name, app_email, password],
-      (sqlTxn, res) => {
-        console.log(`added.`);
-      },
-      error => {
-        console.log('error on Insert data ', error.message);
-      },
+      (sqlTxn, res) => {},
+      error => {},
     );
   });
 };
@@ -41,7 +33,6 @@ export const showData = setArr => {
       'select * from vault order by id desc',
       [],
       (sqlTxn, res) => {
-        console.log(`names retrieved successfully`);
         let len = res.rows.length;
 
         if (len > 0) {
@@ -58,9 +49,7 @@ export const showData = setArr => {
           setArr(results);
         }
       },
-      error => {
-        console.log('error on creating table ', error.message);
-      },
+      error => {},
     );
   });
 };
