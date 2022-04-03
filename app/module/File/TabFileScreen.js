@@ -40,17 +40,16 @@ const TabFilesScreen = ({ navigation }) => {
       });
       setFileResponse(response);
       const encryptFolder = RNFS.ExternalDirectoryPath + '/Encrypt';
-      RNFS.mkdir(encryptFolder).then(() => {
-        console.log('folder');
-      });
+      RNFS.mkdir(encryptFolder).then(() => {});
       const decryptFolder = RNFS.ExternalDirectoryPath + '/Decrypt';
-      RNFS.mkdir(decryptFolder).then(() => {
-        console.log('folder');
-      });
+      RNFS.mkdir(decryptFolder).then(() => {});
 
       RNFS.readFile(response.uri, 'base64')
         .then(item => {
-          let encryptFile = CryptoJS.AES.encrypt(item, '123').toString();
+          let encryptFile = CryptoJS.AES.encrypt(
+            item,
+            '17Bsi20Mc#@1298#',
+          ).toString();
           const path =
             RNFS.ExternalDirectoryPath + '/Encrypt' + `/${response.name}`;
           RNFS.writeFile(path, encryptFile, 'base64')
