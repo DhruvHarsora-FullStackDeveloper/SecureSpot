@@ -1,22 +1,21 @@
-import { FastField } from 'formik';
-import { set } from 'ramda';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  View,
-  SafeAreaView,
+  Alert,
+  Image,
   KeyboardAvoidingView,
   Platform,
-  Alert,
+  SafeAreaView,
   TouchableOpacity,
-  Image,
+  View,
 } from 'react-native';
-import { ProgressSteps, ProgressStep } from 'react-native-progress-steps';
-import Icon from '../../../assest/Icon';
+import { ProgressStep, ProgressSteps } from 'react-native-progress-steps';
+import Icons from '../../../assets/icons';
 import CustomInput from '../../../components/Input/CustomInput';
+import { NavigationStrings } from '../../../constants';
 import Colors from '../../../theme/Colors';
 import styles from './style';
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNum, setPhoneNum] = useState('');
@@ -70,6 +69,8 @@ const RegisterScreen = () => {
     if (masterKey === '') {
       Alert.alert('Warning!!', 'MasterKey Cannot be Empty');
       setStepError(false);
+    } else {
+      navigation.navigate(NavigationStrings.TABS);
     }
   };
   const [visibility, setVisibility] = useState(true);
@@ -131,7 +132,7 @@ const RegisterScreen = () => {
                 activeOpacity={0.7}>
                 <Image
                   style={styles.iconStyle}
-                  source={visibility ? Icon.eye : Icon.eyeOff}
+                  source={visibility ? Icons.show : Icons.hide}
                 />
               </TouchableOpacity>
             </View>
@@ -152,7 +153,7 @@ const RegisterScreen = () => {
                 activeOpacity={0.7}>
                 <Image
                   style={styles.iconStyle}
-                  source={confirmVisibility ? Icon.eye : Icon.eyeOff}
+                  source={confirmVisibility ? Icons.show : Icons.hide}
                 />
               </TouchableOpacity>
             </View>
