@@ -103,9 +103,10 @@ const TabFilesScreen = ({ navigation }) => {
     console.log(path);
     RNFS.readFile(path, 'base64')
       .then(item => {
-        let decryptFile = CryptoJS.AES.decrypt(item, '123').toString(
-          CryptoJS.enc.Utf8,
-        );
+        let decryptFile = CryptoJS.AES.decrypt(
+          item,
+          '17Bsi20Mc#@1298#',
+        ).toString(CryptoJS.enc.Utf8);
 
         RNFS.writeFile(
           `${RNFS.ExternalDirectoryPath}/Encrypt/${filename}`,
