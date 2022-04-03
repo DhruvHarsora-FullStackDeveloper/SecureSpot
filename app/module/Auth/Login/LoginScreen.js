@@ -114,12 +114,12 @@ const LoginScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
 
-        <TouchableOpacity style={styles.subTextContainer}>
+        <View style={styles.subTextContainer}>
           <Text style={styles.normalText}>{ConstStrings.forgetPassword}</Text>
           <Text onPress={resetPasswordScreen} style={styles.boldText}>
             {ConstStrings.reset}
           </Text>
-        </TouchableOpacity>
+        </View>
         <CustomButton title="Login" style={styles.btn} onPress={loginHandler} />
       </ScrollView>
     </KeyboardAvoidingView>
