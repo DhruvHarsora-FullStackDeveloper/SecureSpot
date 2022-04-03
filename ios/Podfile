@@ -5,6 +5,10 @@ platform :ios, '11.0'
 
 target 'SecureSpot' do
   config = use_native_modules!
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
 
   use_react_native!(
     :path => config[:reactNativePath],

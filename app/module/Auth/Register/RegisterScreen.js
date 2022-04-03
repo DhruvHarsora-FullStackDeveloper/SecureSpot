@@ -73,6 +73,9 @@ const RegisterScreen = ({ navigation }) => {
     if (masterKey === '') {
       Alert.alert('Warning!!', 'MasterKey Cannot be Empty');
       setStepError(false);
+    } else if (masterKey.length < 8 || masterKey.length > 18) {
+      setStepError(false);
+      Alert.alert('Warning!!', 'MasterKey Key must between 8 to 18');
     } else {
       ///api
       const obj = {
@@ -189,6 +192,7 @@ const RegisterScreen = ({ navigation }) => {
                 customStyle={styles.textInputField}
                 value={masterKey}
                 onChangeText={e => setMasterKey(e)}
+                maxLength={18}
               />
             </View>
           </KeyboardAvoidingView>

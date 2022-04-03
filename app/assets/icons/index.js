@@ -14,4 +14,5 @@ export default {
   note: require('../icons/note.png'),
   delete: require('../icons/delete.png'),
   profilePic: require('../icons/profile.png'),
+  decryption: require('./decryption.png'),
 };
