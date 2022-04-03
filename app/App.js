@@ -8,16 +8,18 @@
 
 import React, { useEffect } from 'react';
 import { SafeAreaView } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import AppNavigation from './navigation/AppNavigation';
 import reduxStore from './redux/Store';
+import { createTable } from './SQLite/sqlite';
 import { applicationStyles } from './theme';
-import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
+    createTable();
   });
   return (
     <Provider store={reduxStore.store}>

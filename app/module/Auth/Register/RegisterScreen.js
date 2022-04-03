@@ -188,7 +188,7 @@ const RegisterScreen = ({ navigation }) => {
           <KeyboardAvoidingView behavior="padding">
             <View style={styles.masterKeyContainer}>
               <CustomInput
-                label="Master Key"
+                label="Enter Master Key 8 to 18 character"
                 customStyle={styles.textInputField}
                 value={masterKey}
                 onChangeText={e => setMasterKey(e)}
