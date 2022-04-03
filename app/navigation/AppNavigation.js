@@ -4,7 +4,12 @@ import React from 'react';
 import { LogBox } from 'react-native';
 import { useSelector } from 'react-redux';
 import { NavigationStrings } from '../constants';
-import { IntroScreen, LoginScreen, RegisterScreen } from '../module';
+import {
+  IntroScreen,
+  LoginScreen,
+  RegisterScreen,
+  TabFilesScreen,
+} from '../module';
 import { onBoardSelectors } from '../redux/KeyRedux';
 import { onUserSelectors } from '../redux/UserRedux';
 import TabBottomNavigation from './TabNavigation';
