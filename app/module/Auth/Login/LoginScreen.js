@@ -9,15 +9,20 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 import Icons from '../../../assets/icons';
 import { CustomButton, CustomInput } from '../../../components';
 import { ConstStrings, NavigationStrings } from '../../../constants';
+import UserActions, { onUserSelectors } from '../../../redux/UserRedux';
 import styles from './styles';
 
 const LoginScreen = ({ navigation }) => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
+  const getLogin = useSelector(onUserSelectors.getUserData);
+
   const emailInputHandler = enteredText => {
     setEmail(enteredText);
   };
@@ -38,7 +43,15 @@ const LoginScreen = ({ navigation }) => {
       } else if (!validateEmail(email)) {
         Alert.alert('Warning!!', 'Your Email is not Correct');
       } else {
-        Alert.alert('done');
+        ///api
+        const obj = {
+          email: email,
+          password: password,
+        };
+        dispatch(UserActions.signUpRequest('/login', obj));
+        if (getLogin) {
+          navigation.replace(NavigationStrings.TABS);
+        }
       }
     }
   };

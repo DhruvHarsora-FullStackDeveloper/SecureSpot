@@ -1,12 +1,16 @@
-import { Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { useSelector } from 'react-redux';
 import icons from '../../assets/icons';
-import { TextInput } from 'react-native-paper';
-import styles from './styles';
+import { CustomInput } from '../../components';
 import { ConstStrings, NavigationStrings } from '../../constants';
-import { Colors } from '../../theme';
-
+import { onUserSelectors } from '../../redux/UserRedux';
+import styles from './styles';
+onUserSelectors;
 const EditProfile = ({ navigation }) => {
+  const getdata = useSelector(onUserSelectors.getLoginData);
+  const { user } = getdata;
+
   return (
     <View>
       <View style={styles.hederView}>
@@ -24,10 +28,9 @@ const EditProfile = ({ navigation }) => {
       <View style={styles.upperView}>
         <View style={styles.avatarView}>
           <Image
-            source={{
-              uri: 'https://www.focusedu.org/wp-content/uploads/2018/12/circled-user-male-skin-type-1-2.png',
-            }}
+            source={icons.profilePic}
             style={styles.avatarStyle}
+            resizeMode="stretch"
           />
         </View>
         <TouchableOpacity style={styles.cameraIconView}>
@@ -35,25 +38,27 @@ const EditProfile = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <View style={styles.detailView}>
-        <Text style={styles.textStyle}>{ConstStrings.username}</Text>
-        <TextInput
-          style={styles.textInputStyle}
-          activeUnderlineColor={Colors.themeColor}
+        <CustomInput
+          label={ConstStrings.username}
+          customStyle={styles.textInput}
+          autoCapitalize={'none'}
+          value={user.username}
         />
-        <Text style={styles.textStyle}>{ConstStrings.email}</Text>
-        <TextInput
-          style={styles.textInputStyle}
-          activeUnderlineColor={Colors.themeColor}
+        <CustomInput
+          label={ConstStrings.email}
+          keyboardType="email-address"
+          customStyle={styles.textInput}
+          autoCapitalize={'none'}
         />
-        <Text style={styles.textStyle}>{ConstStrings.password}</Text>
-        <TextInput
-          style={styles.textInputStyle}
-          activeUnderlineColor={Colors.themeColor}
+        <CustomInput
+          label="Password"
+          style={styles.textInput}
+          autoCapitalize={'none'}
         />
-        <Text style={styles.textStyle}>{ConstStrings.masterKey}</Text>
-        <TextInput
-          style={styles.textInputStyle}
-          activeUnderlineColor={Colors.themeColor}
+        <CustomInput
+          label={ConstStrings.masterKey}
+          customStyle={styles.textInput}
+          autoCapitalize={'none'}
         />
       </View>
     </View>

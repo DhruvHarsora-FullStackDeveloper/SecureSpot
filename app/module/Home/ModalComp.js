@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import {
-  View,
-  Modal,
+  Alert,
   KeyboardAvoidingView,
+  Modal,
   Platform,
   Text,
   TouchableOpacity,
-  Alert,
+  View,
 } from 'react-native';
 import { CustomInput } from '../../components';
 import styles from './styles';
 
-export const ModalView = ({ visible, onAdd, title }) => {
+export const ModalView = ({ visible, onAdd, title, onCancel }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [note, setNote] = useState('');
@@ -59,6 +59,11 @@ export const ModalView = ({ visible, onAdd, title }) => {
               onChangeText={e => setPassword(e)}
             />
             <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.cancelStyle} onPress={onCancel}>
+                <Text title={title} style={styles.buttonText}>
+                  Cancel
+                </Text>
+              </TouchableOpacity>
               <TouchableOpacity style={styles.button} onPress={detailsHandler}>
                 <Text title={title} style={styles.buttonText}>
                   Save
