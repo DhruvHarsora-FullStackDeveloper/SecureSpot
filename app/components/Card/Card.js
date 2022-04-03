@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
-import { Colors, Metrics } from '../../theme';
-const { moderateScale, verticalScale, horizontalScale } = Metrics;
-import styles from './styles';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icons from '../../assets/icons';
+import { DeleteData } from '../../SQLite/sqlite';
+import { Colors, Metrics } from '../../theme';
+import styles from './styles';
+const { moderateScale, verticalScale, horizontalScale } = Metrics;
 
 const Card = props => {
-  const { email, password, note } = props;
+  const { email, password, note, id, showData, setData } = props;
 
   return (
     <View style={myStyles.screen}>
@@ -26,7 +27,13 @@ const Card = props => {
           </View>
         </View>
       </View>
-      <TouchableOpacity style={myStyles.deleteView} activeOpacity={0.5}>
+      <TouchableOpacity
+        style={myStyles.deleteView}
+        activeOpacity={0.5}
+        onPress={() => {
+          DeleteData(id);
+          showData(setData);
+        }}>
         <Image source={Icons.delete} style={myStyles.deleteIcon} />
       </TouchableOpacity>
     </View>

@@ -1,28 +1,24 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useEffect } from 'react';
-import { useCallback } from 'react';
-import { useState } from 'react';
+import CryptoJS from 'crypto-js';
+import React, { useEffect, useState } from 'react';
 import {
-  Text,
-  View,
-  Button,
   Alert,
   Image,
   Platform,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import DocumentPicker, { types } from 'react-native-document-picker';
-import { Colors } from '../../theme';
-import styles from './styles';
-import CryptoJS from 'crypto-js';
-import {
-  requestMultiple,
-  PERMISSIONS,
-  checkMultiple,
-} from 'react-native-permissions';
 import RNFS from 'react-native-fs';
-import Icons from '../../assets/icons';
 import { FlatList } from 'react-native-gesture-handler';
+import {
+  checkMultiple,
+  PERMISSIONS,
+  requestMultiple,
+} from 'react-native-permissions';
+import Icons from '../../assets/icons';
+import styles from './styles';
 const TabFilesScreen = ({ navigation }) => {
   const [fileResponse, setFileResponse] = useState([]);
   const [permiss, setPermiss] = useState(false);
@@ -130,7 +126,7 @@ const TabFilesScreen = ({ navigation }) => {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome</Text>
+      <Text style={styles.welcome}>Files</Text>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={baseData}
