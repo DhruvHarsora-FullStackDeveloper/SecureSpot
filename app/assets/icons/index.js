@@ -8,4 +8,9 @@ export default {
   back: require('../icons/back.png'),
   edit: require('../icons/edit.png'),
   arrow: require('../icons/arrow.png'),
+  addVault: require('../icons/addVault.png'),
+  email: require('../icons/email.png'),
+  key: require('../icons/key.png'),
+  note: require('../icons/note.png'),
+  delete: require('../icons/delete.png'),
 };
