@@ -1,0 +1,18 @@
+export default {
+  security: require('../icons/security.png'),
+  folder: require('../icons/folder.png'),
+  profile: require('../icons/account.png'),
+  show: require('../icons/show.png'),
+  hide: require('../icons/hide.png'),
+  camera: require('../icons/camera.png'),
+  back: require('../icons/back.png'),
+  edit: require('../icons/edit.png'),
+  arrow: require('../icons/arrow.png'),
+  addVault: require('../icons/addVault.png'),
+  email: require('../icons/email.png'),
+  key: require('../icons/key.png'),
+  note: require('../icons/note.png'),
+  delete: require('../icons/delete.png'),
+  profilePic: require('../icons/profile.png'),
+  decryption: require('../icons/decryption.png'),
+};
