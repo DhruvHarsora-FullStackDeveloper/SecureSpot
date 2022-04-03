@@ -28,7 +28,7 @@ const TabBottomNavigation = () => {
               style={{
                 width: horizontalScale(24),
                 height: verticalScale(24),
-                tintColor: focused ? Colors.white : Colors.gray,
+                tintColor: focused ? Colors.white : Colors.grey,
               }}
               source={Icons.security}
             />
@@ -45,7 +45,7 @@ const TabBottomNavigation = () => {
               style={{
                 width: horizontalScale(24),
                 height: verticalScale(24),
-                tintColor: focused ? Colors.white : Colors.gray,
+                tintColor: focused ? Colors.white : Colors.grey,
               }}
               source={Icons.folder}
             />
@@ -62,7 +62,7 @@ const TabBottomNavigation = () => {
               style={{
                 width: horizontalScale(24),
                 height: verticalScale(24),
-                tintColor: focused ? Colors.white : Colors.gray,
+                tintColor: focused ? Colors.white : Colors.grey,
               }}
               source={Icons.profile}
             />

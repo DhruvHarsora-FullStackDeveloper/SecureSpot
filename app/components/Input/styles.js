@@ -4,11 +4,11 @@ import { Colors, Metrics } from '../../theme';
 const { moderateScale, verticalScale } = Metrics;
 const styles = StyleSheet.create({
   textInput: {
-    height: moderateScale(50),
     marginVertical: verticalScale(10),
     color: Colors.black,
     fontWeight: '500',
-    fontSize: moderateScale(20),
+    fontSize: moderateScale(15),
+    padding: 0,
   },
 });
 export default styles;

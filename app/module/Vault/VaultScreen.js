@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import {
-  TouchableOpacity,
-  SafeAreaView,
-  Image,
   FlatList,
-  View,
+  Image,
+  SafeAreaView,
   Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import Icons from '../../assets/icons';
 import Card from '../../components/Card/Card';
@@ -45,7 +45,6 @@ const VaultScreen = () => {
         keyExtractor={item => item.a}
         onScrollBeginDrag={() => setFloatingButtonVisibility(false)}
         onScrollEndDrag={() => setFloatingButtonVisibility(true)}
-        onScrollToTop
       />
       {floatingButtonVisibility ? (
         <TouchableOpacity

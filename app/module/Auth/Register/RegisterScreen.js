@@ -9,13 +9,17 @@ import {
   View,
 } from 'react-native';
 import { ProgressStep, ProgressSteps } from 'react-native-progress-steps';
+import { useDispatch, useSelector } from 'react-redux';
 import Icons from '../../../assets/icons';
 import CustomInput from '../../../components/Input/CustomInput';
 import { NavigationStrings } from '../../../constants';
+import UserActions, { onUserSelectors } from '../../../redux/UserRedux';
 import Colors from '../../../theme/Colors';
 import styles from './style';
 
 const RegisterScreen = ({ navigation }) => {
+  const getUserData = useSelector(onUserSelectors.getUserData);
+  const dispatch = useDispatch();
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNum, setPhoneNum] = useState('');
@@ -70,7 +74,18 @@ const RegisterScreen = ({ navigation }) => {
       Alert.alert('Warning!!', 'MasterKey Cannot be Empty');
       setStepError(false);
     } else {
-      navigation.navigate(NavigationStrings.TABS);
+      ///api
+      const obj = {
+        username: fullName,
+        email: email,
+        password: password,
+        contact: Number(phoneNum),
+        masterkey: masterKey,
+      };
+      dispatch(UserActions.signUpRequest('/signup', obj));
+      if (getUserData !== null && getUserData.result === 1) {
+        navigation.replace(NavigationStrings.TABS);
+      }
     }
   };
   const [visibility, setVisibility] = useState(true);

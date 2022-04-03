@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Metrics } from '../../theme';
-import { Colors } from '../../theme';
+import { Colors, Metrics } from '../../theme';
 const { verticalScale, horizontalScale, moderateScale } = Metrics;
 const styles = StyleSheet.create({
   hederView: {
-    height: verticalScale(42),
+    height: verticalScale(50),
     backgroundColor: Colors.themeColor,
     flexDirection: 'row',
     alignItems: 'center',
@@ -13,9 +12,9 @@ const styles = StyleSheet.create({
   },
   avatarView: {
     overflow: 'hidden',
-    borderRadius: moderateScale(200),
+    borderRadius: moderateScale(10),
     height: verticalScale(150),
-    width: horizontalScale(140),
+    width: horizontalScale(200),
     alignSelf: 'center',
   },
   avatarStyle: {
@@ -44,8 +43,8 @@ const styles = StyleSheet.create({
     tintColor: Colors.white,
   },
   backIcon: {
-    height: verticalScale(22),
-    width: horizontalScale(22),
+    height: verticalScale(26),
+    width: horizontalScale(26),
     tintColor: Colors.white,
   },
   detailView: {
@@ -55,14 +54,14 @@ const styles = StyleSheet.create({
   },
   textInputStyle: {
     width: horizontalScale(300),
-    height: verticalScale(40),
+    height: verticalScale(30),
     backgroundColor: 'transparent',
+    marginStart: 3,
     borderBottomColor: Colors.grey,
-    marginVertical: verticalScale(15),
-    paddingHorizontal: 0,
   },
   textStyle: {
-    color: Colors.grey,
+    marginTop: verticalScale(10),
+    color: Colors.placeHolderColor,
   },
 });
 

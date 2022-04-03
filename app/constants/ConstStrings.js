@@ -6,7 +6,7 @@ export default {
   forgetPassword: 'Forgot Password / ',
   reset: 'Reset',
   fullName: 'Full Name',
-  username: 'Username',
+  username: 'USERNAME',
   masterkey: 'Master Key',
   email: 'Email',
   password: 'Password',
@@ -16,4 +16,6 @@ export default {
   import: 'Import',
   export: 'Export',
   logOut: 'Log Out',
+  BASE_URL: 'https://securespot-api.herokuapp.com',
+  BASE_URL2: 'http://securespot-lb-907628388.us-east-1.elb.amazonaws.com',
 };

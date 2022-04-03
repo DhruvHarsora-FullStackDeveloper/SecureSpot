@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   userProfile: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: verticalScale(40),
+    marginTop: verticalScale(10),
   },
   profileText1: {
     fontSize: moderateScale(30),
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
+    borderColor: 'transparent',
     backgroundColor: Colors.themeColor,
   },
 });

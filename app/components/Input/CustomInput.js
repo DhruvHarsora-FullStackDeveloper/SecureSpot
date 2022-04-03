@@ -1,6 +1,5 @@
 //import liraries
 import React from 'react';
-import { View } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { Colors } from '../../theme';
 import styles from './styles';
@@ -17,22 +16,20 @@ const CustomInput = ({
   maxLength,
 }) => {
   return (
-    <View style={styles.container}>
-      <TextInput
-        outlineColor={Colors.themeColor}
-        label={label}
-        activeOutlineColor={Colors.themeColor}
-        mode="outlined"
-        style={{ ...styles.textInput, ...customStyle }}
-        onChangeText={onChangeText}
-        value={value}
-        autoCapitalize={autoCapitalize}
-        autoCorrect={false}
-        keyboardType={keyboardType}
-        secureTextEntry={secureTextEntry}
-        maxLength={maxLength}
-      />
-    </View>
+    <TextInput
+      outlineColor={Colors.themeColor}
+      label={label}
+      activeOutlineColor={Colors.themeColor}
+      mode="outlined"
+      style={{ ...styles.textInput, ...customStyle }}
+      onChangeText={onChangeText}
+      value={value}
+      autoCapitalize={autoCapitalize}
+      autoCorrect={false}
+      keyboardType={keyboardType}
+      secureTextEntry={secureTextEntry}
+      maxLength={maxLength}
+    />
   );
 };
 

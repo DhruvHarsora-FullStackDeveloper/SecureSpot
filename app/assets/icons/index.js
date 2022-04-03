@@ -13,4 +13,5 @@ export default {
   key: require('../icons/key.png'),
   note: require('../icons/note.png'),
   delete: require('../icons/delete.png'),
+  profilePic: require('../icons/profile.png'),
 };
