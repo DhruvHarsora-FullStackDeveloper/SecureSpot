@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { useSelector } from 'react-redux';
 import icons from '../../assets/icons';
 import { CustomInput } from '../../components';
 import { ConstStrings, NavigationStrings } from '../../constants';
@@ -8,9 +7,6 @@ import { onUserSelectors } from '../../redux/UserRedux';
 import styles from './styles';
 onUserSelectors;
 const EditProfile = ({ navigation }) => {
-  const getdata = useSelector(onUserSelectors.getLoginData);
-  const { user } = getdata;
-
   return (
     <View>
       <View style={styles.hederView}>
@@ -42,7 +38,7 @@ const EditProfile = ({ navigation }) => {
           label={ConstStrings.username}
           customStyle={styles.textInput}
           autoCapitalize={'none'}
-          value={user.username}
+          value={'USERNAME'}
         />
         <CustomInput
           label={ConstStrings.email}
